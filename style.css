@@ -11,13 +11,11 @@
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
-  display: grid;
-  grid-template-rows: 250px 250px 250px;
-  grid-template-columns: 250px 250px;
   grid-gap: 30px;
   justify-content: end;
   padding-top: 15px;
   padding-right: 10px;
+
 } 
 .searchBar{
   margin-top: -51%;
@@ -35,9 +33,7 @@
   align-items: center;
   border-radius: 60px;
   padding: 10px 20px;
-  margin-left: auto;
-  margin-right: auto;
-  transform: translateY(250%);
+  
 }
 .search-bar input{
   background: transparent;
@@ -77,4 +73,34 @@
   width: 100%;
 }
 
+
+.outputBox{
+  background-color: #f44566;
+  height: 50px;
+  width: 500px;
+}
+p{
+  color: white;
+  text-align: center;
+  transform: translateY(-1950%);
+  background-color: #f44566;
+  font-weight: bold;
+  border-radius: 50px;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 20px; 
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f44566;
+  padding: 10px;
+  margin-top: 20px; 
+}
 
