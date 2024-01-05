@@ -25,6 +25,7 @@ function sort(){
             }
         }
     }
+    array.sort();
     console.log(String(array))
     outputBox.innerHTML = '<p>Sorted Array: ' + array.join(', ') + '</p>';
 }

@@ -38,5 +38,6 @@ public class rockPaperScissors {
                 System.out.println("Computer wins!");
             }
         }
+        scanner.close();
     }
 }
