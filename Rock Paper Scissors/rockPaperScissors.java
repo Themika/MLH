@@ -10,14 +10,14 @@ public class rockPaperScissors {
 
         while (true) {
             System.out.println("Enter your choice (Rock, Paper, Scissors) or type 'exit' to end: ");
-            String userChoice = scanner.nextLine().toLowerCase();
+            String input = scanner.nextLine().toLowerCase();
 
-            if (userChoice.equals("exit")) {
+            if (input.equals("exit")) {
                 System.out.println("Thanks for playing! Exiting the game.");
                 break;
             }
 
-            if (!userChoice.equals("rock") && !userChoice.equals("paper") && !userChoice.equals("scissors")) {
+            if (!input.equals("rock") && !input.equals("paper") && !input.equals("scissors")) {
                 System.out.println("Invalid choice. Please enter Rock, Paper, or Scissors.");
                 continue;
             }
@@ -28,11 +28,11 @@ public class rockPaperScissors {
             System.out.println("Computer chose: " + computerChoice);
 
             // Determine the winner
-            if (userChoice.equals(computerChoice.toLowerCase())) {
+            if (input.equals(computerChoice.toLowerCase())) {
                 System.out.println("It's a tie!");
-            } else if ((userChoice.equals("rock") && computerChoice.equals("Scissors"))
-                    || (userChoice.equals("paper") && computerChoice.equals("Rock"))
-                    || (userChoice.equals("scissors") && computerChoice.equals("Paper"))) {
+            } else if ((input.equals("rock") && computerChoice.equals("Scissors"))
+                    || (input.equals("paper") && computerChoice.equals("Rock"))
+                    || (input.equals("scissors") && computerChoice.equals("Paper"))) {
                 System.out.println("You win!");
             } else {
                 System.out.println("Computer wins!");
