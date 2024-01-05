@@ -3,56 +3,40 @@ import java.util.Scanner;
 
 public class rockPaperScissors {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
 
+        String[] options = {"Rock", "Paper", "Scissors"};
 
-        String[] ai = new String[]{"Rock", "Paper","Scissors"};
-        Random rand = new Random();
+        while (true) {
+            System.out.println("Enter your choice (Rock, Paper, Scissors) or type 'exit' to end: ");
+            String userChoice = scanner.nextLine().toLowerCase();
 
-        int upperbound = 3;
-        int int_random = rand.nextInt(upperbound);
+            if (userChoice.equals("exit")) {
+                System.out.println("Thanks for playing! Exiting the game.");
+                break;
+            }
 
-        for(int i =0; i < 1; i++){
-            System.out.println("Lets play Rock Paper Scissor");
-            System.out.println("3");
-            System.out.println("2");
-            System.out.println("1");
-            System.out.println("GOOOOOO");
-            String input = sc.next();
-            Logic(int_random,ai,input);
-        }
-    }
-    static void Logic(int i, String[] ai, String player){
-        if(ai[i].equals("Rock") && player.equals("Paper")){
-            System.out.println("AI played Rock. You played Paper. You win");
-        }
-        if(ai[i].equals("Rock") && player.equals("Scissor")){
-            System.out.println("AI played Rock. You played Paper. AI win");
-        }
-        if(ai[i].equals("Rock") && player.equals("Rock")){
-            System.out.println("AI played Rock. You played Paper. Tie");
-        }
+            if (!userChoice.equals("rock") && !userChoice.equals("paper") && !userChoice.equals("scissors")) {
+                System.out.println("Invalid choice. Please enter Rock, Paper, or Scissors.");
+                continue;
+            }
 
-        if(ai[i].equals("Paper") && player.equals("Paper")){
-            System.out.println("AI played Paper. You played Paper. Tie");
-        }
-        if(ai[i].equals("Paper") && player.equals("Scissor")){
-            System.out.println("AI played Scissor. You played Scissor. You win");
-        }
-        if(ai[i].equals("Paper") && player.equals("Rock")){
-            System.out.println("AI played Paper. You played Rock. AI win");
-        }
+            int computerIndex = random.nextInt(3);
+            String computerChoice = options[computerIndex];
 
-        if(ai[i].equals("Scissor") && player.equals("Paper")){
-            System.out.println("AI played Scissor. You played Paper. AI wins");
-        }
-        if(ai[i].equals("Scissor") && player.equals("Scissor")){
-            System.out.println("AI played Scissor. You played Scissor. Tie ");
-        }
-        if(ai[i].equals("Scissor") && player.equals("Rock")){
-            System.out.println("AI played Scissor. You played Rock. You win");
-        }
+            System.out.println("Computer chose: " + computerChoice);
 
-
+            // Determine the winner
+            if (userChoice.equals(computerChoice.toLowerCase())) {
+                System.out.println("It's a tie!");
+            } else if ((userChoice.equals("rock") && computerChoice.equals("Scissors"))
+                    || (userChoice.equals("paper") && computerChoice.equals("Rock"))
+                    || (userChoice.equals("scissors") && computerChoice.equals("Paper"))) {
+                System.out.println("You win!");
+            } else {
+                System.out.println("Computer wins!");
+            }
+        }
     }
 }
