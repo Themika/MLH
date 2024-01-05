@@ -13,7 +13,11 @@ public class rockPaperScissors {
         int int_random = rand.nextInt(upperbound);
 
         for(int i =0; i < 1; i++){
-            System.out.println("Lets play Rock Paper Scissor\n Play Rock Paper Scissors");
+            System.out.println("Lets play Rock Paper Scissor");
+            System.out.println("3");
+            System.out.println("2");
+            System.out.println("1");
+            System.out.println("GOOOOOO");
             String input = sc.next();
             Logic(int_random,ai,input);
         }
@@ -30,23 +34,23 @@ public class rockPaperScissors {
         }
 
         if(ai[i].equals("Paper") && player.equals("Paper")){
-            System.out.println("AI played Rock. You played Paper. Tie");
+            System.out.println("AI played Paper. You played Paper. Tie");
         }
         if(ai[i].equals("Paper") && player.equals("Scissor")){
-            System.out.println("AI played Rock. You played Paper. You win");
+            System.out.println("AI played Scissor. You played Scissor. You win");
         }
         if(ai[i].equals("Paper") && player.equals("Rock")){
-            System.out.println("AI played Rock. You played Paper. Ai win");
+            System.out.println("AI played Paper. You played Rock. AI win");
         }
 
         if(ai[i].equals("Scissor") && player.equals("Paper")){
-            System.out.println("AI played Rock. You played Paper. AI wins");
+            System.out.println("AI played Scissor. You played Paper. AI wins");
         }
         if(ai[i].equals("Scissor") && player.equals("Scissor")){
-            System.out.println("AI played Rock. You played Paper. Tie ");
+            System.out.println("AI played Scissor. You played Scissor. Tie ");
         }
         if(ai[i].equals("Scissor") && player.equals("Rock")){
-            System.out.println("AI played Rock. You played Paper. You win");
+            System.out.println("AI played Scissor. You played Rock. You win");
         }
 
 
