@@ -86,6 +86,7 @@ p{
   background-color: #f44566;
   font-weight: bold;
   border-radius: 50px;
+  margin: 50px;
 }
 header {
   display: flex;
@@ -101,4 +102,7 @@ footer {
   background-color: #f44566;
   padding: 10px;
 }
-
+.id{
+  background-color: #f44566;
+  margin-top: 20px;
+}
