@@ -83,11 +83,17 @@ p{
   color: white;
   text-align: center;
   background-color: #f44566;
-  transform: translate(245%, -2000%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 150%);
   font-weight: bold;
   border-radius: 50px;
-  margin: 50px;
+  margin: 0;
+  padding: 20px;
   width: 100%;
+  max-width: 500px; /* Adjust max-width as needed */
+  box-sizing: border-box;
 }
 header {
   display: flex;
