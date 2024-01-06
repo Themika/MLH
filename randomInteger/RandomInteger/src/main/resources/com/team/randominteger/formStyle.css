@@ -1,0 +1,17 @@
+#labeling{
+    -fx-font: bold 22pt 'monospace';
+    -fx-text-fill: limegreen;
+    -fx-background-color: transparent;
+}
+
+#io{
+    -fx-font-family: 'serif';
+    -fx-font-style: italic;
+    -fx-font-size: 18pt;
+    -fx-text-fill: forestgreen;
+    -fx-background-color: transparent;
+}
+
+#grid{
+    -fx-background-color: black;
+}
