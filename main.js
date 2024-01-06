@@ -7,6 +7,7 @@ let input = form.elements.q;
 
 let button = document.getElementById("button")
 button.addEventListener("click", sort);
+let outputBox = document.querySelector('.outputBox');
 
 let array = Array();
 
@@ -26,6 +27,15 @@ function sort(){
             }
         }
     }
-    
+    array.sort();
     console.log(String(array))
+    outputBox.innerHTML = '<p>Sorted Array: ' + array.join(', ') + '</p>';
+}
+
+function swap(a, b){
+    let tmpA = array[a];
+    let tmpB = array[b];
+
+    array[a] = tmpB;
+    array[b] = tmpA;
 }
