@@ -82,11 +82,12 @@
 p{
   color: white;
   text-align: center;
-  transform: translateY(-1950%);
   background-color: #f44566;
+  transform: translate(245%, -2000%);
   font-weight: bold;
   border-radius: 50px;
   margin: 50px;
+  width: 100%;
 }
 header {
   display: flex;
@@ -102,7 +103,8 @@ footer {
   background-color: #f44566;
   padding: 10px;
 }
-.id{
-  background-color: #f44566;
-  margin-top: 20px;
+h1{
+  color: white;
+  text-align: center;
+  margin-right: 150px;
 }
