@@ -26,6 +26,6 @@ function sort(){
             }
         }
     }
-
+    
     console.log(String(array))
 }
