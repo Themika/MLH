@@ -4,6 +4,8 @@ from tkinter import *
 from tkinter.ttk import Combobox
 from PIL import Image, ImageTk
 
+from back_end import *
+
 win = tk.Tk()
 win.title("NASA API")
 win.configure(background='black')
@@ -36,11 +38,6 @@ st.place(relx= 0.2, rely= 0.253)
 
 et = Entry (win, bg='white',font=('Arial', 14, 'bold'), width=10, bd=5 )
 et.place(relx= 0.2, rely= 0.3)
-
-
-
-combo = Combobox(win, state='readonly', font=('Arial', 17), width=10)
-combo.place(relx = 0.11, rely=0.35)
 
 
 def create_card(parent, title, esitmated_Diameter_Meter_Max, esitmated_Diameter_Meter_Min, esitmated_Diameter_KM_Max, esitmated_Diameter_KM_Min, absolute_Magnitude, Potential_Danger_Level, Date_Of_Nearest_Approach, image_path, width, height):
@@ -93,13 +90,32 @@ def show_card():
 
     card.place(relx=0.5, rely=0.5, anchor='center')  
 
+extracted_data: Data_Extraction
+def generateData():
+    start_date = list(map(int, st.get().split("-")))
+    end_date = list(map(int, et.get().split("-")))
+
+    extracted_data = Data_Extraction(date(start_date[0], start_date[1], start_date[2]),
+                                          date(end_date[0], end_date[1], end_date[2]))
+    extracted_data.get_asteriods()
+
+    combo.config(values=extracted_data.asteriod_names)
+
+def selection_change(e):
+    print(combox_value.get())
+
+combox_value = tk.StringVar()
+combo = Combobox(win, state='readonly', font=('Arial', 17), width=10, textvariable=combox_value)
+combo.bind("<<ComboboxSelected>>", selection_change)
+combo.place(relx = 0.11, rely=0.35)
 
 
 # Configure the style for the light grey background
 style = ttk.Style(win)
 style.configure('LightGrey.TFrame', background='#8a8883')  # Use hex code for light grey
 
-btn = Button(win, text='Generate Asteroid', bd='5', command=show_card)
+#button is used to pull the data for those asteriods
+btn = Button(win, text='Generate Asteroid', bd='5', command=generateData)
 btn.place(relx= 0.05, rely=0.35) 
  
 
