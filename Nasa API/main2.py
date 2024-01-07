@@ -10,7 +10,7 @@ from back_end import *
 win = tk.Tk()
 win.title("NASA API")
 win.configure(background='black')
-win.geometry('1920x1080')
+win.state('zoomed')
 
 image = Image.open(r'Nasa API\galaxy.jpg')
 image = ImageTk.PhotoImage(image)
@@ -27,6 +27,9 @@ des.place(relx = 0.5, rely = 0.09, anchor= CENTER)
 inst = ttk.Label (text = 'Enter date in YYYY-MM-DD format', font=('Arial', 15), background='black', foreground='white')
 inst.place(relx = 0.5, rely = 0.12, anchor= CENTER)
 
+inst2 = ttk.Label (text = 'The date can only be', font=('Arial', 15), background='black', foreground='white')
+inst.place(relx = 0.5, rely = 0.12, anchor= CENTER)
+
 sdate = ttk.Label (text = 'Start Date:', font=('Arial', 20, 'bold'), background='black', foreground='white')
 sdate.place(relx = 0.05, rely = 0.25)
 
@@ -35,10 +38,10 @@ edate.place(relx = 0.05, rely = 0.3)
 
 
 st = Entry (win, bg='white',font=('Arial', 14, 'bold'), width=10, bd=5 )
-st.place(relx= 0.18, rely= 0.253)
+st.place(relx= 0.16, rely= 0.253)
 
 et = Entry (win, bg='white',font=('Arial', 14, 'bold'), width=10, bd=5 )
-et.place(relx= 0.18, rely= 0.3)
+et.place(relx= 0.16, rely= 0.3)
 
 
 def openURL(url):
