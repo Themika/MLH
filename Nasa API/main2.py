@@ -2,11 +2,18 @@ import tkinter as tk
 from tkinter import ttk 
 from tkinter import *
 from tkinter.ttk import Combobox
+from PIL import Image, ImageTk
 
 win = tk.Tk()
 win.title("NASA API")
 win.configure(background='black')
 win.geometry('1920x1080')
+
+image = Image.open(r'C:\Users\hamza\OneDrive\Pictures\galaxy.jpg')
+image = ImageTk.PhotoImage(image)
+
+image_label = tk.Label(win, image=image)
+image_label.pack()
 
 title = ttk.Label(text='Asteroid Search', font=('Arial Black', 40, 'bold'), background='black', foreground='white')
 title.place(relx = 0.5, rely = 0, anchor = N)
@@ -28,12 +35,15 @@ st = Entry (win, bg='white',font=('Arial', 14, 'bold'), width=10, bd=5 )
 st.place(relx= 0.13, rely= 0.253)
 
 et = Entry (win, bg='white',font=('Arial', 14, 'bold'), width=10, bd=5 )
-et.place(relx= 0.125, rely= 0.3)
+et.place(relx= 0.13, rely= 0.3)
 
 btn = Button(win, text='Generate Asteroid', bd='5')
 btn.place(relx= 0.05, rely=0.35)
 
 combo = Combobox(win, state='readonly', font=('Arial', 17), width=10)
 combo.place(relx = 0.11, rely=0.35)
+
+
+
 
 win.mainloop()
