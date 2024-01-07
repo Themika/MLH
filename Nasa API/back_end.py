@@ -42,7 +42,7 @@ class Data_Extraction:
         parameters = {
             "start_date": startDate,
             "end_date": endDate,
-            "api_key": "UciPBat8ybi63BNgjcuVWih9gvwgRlayRiqLJ82g" #TODO remove API key
+            "api_key": "//" #TODO remove API key
         }
 
         response = requests.get("https://api.nasa.gov/neo/rest/v1/feed?", params=parameters)
