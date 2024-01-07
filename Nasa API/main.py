@@ -8,7 +8,7 @@ def create_card(parent, title, esitmated_Diameter_Meter_Max ,esitmated_Diameter_
 
     title_label = ttk.Label(card_frame, text=title, font=('Helvetica', 14, 'bold'))
     title_label.grid(column=0, row=0, columnspan=2, sticky='w')
-
+    title_label.place(relx=0.5,rely=-0.03,anchor='center')
     img = Image.open(image_path)
     img = img.resize((width, height), Image.ADAPTIVE)  
     img = ImageTk.PhotoImage(img)
