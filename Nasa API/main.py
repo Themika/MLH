@@ -50,7 +50,7 @@ def create_card(parent, title, esitmated_Diameter_Meter_Max, esitmated_Diameter_
 
     URl = ttk.Label(card_frame, text=f"Read More: {URL_For_Astroid}", wraplength=200, background='#8a6883', foreground='white')
     URl.grid(column=0,row=9,columnspan=2,pady=10, sticky='w')
-    URl.bind("<Button-1>", lambda e: openURL("https://www.google.com/search?client=opera-gx&q=hex+color+finder&sourceid=opera&ie=UTF-8&oe=UTF-8"))
+    URl.bind("<Button-1>", lambda e: openURL(f"{URL_For_Astroid}"))
 
     return card_frame
 

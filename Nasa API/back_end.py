@@ -40,19 +40,21 @@ class Data_Extraction:
 
         self.current_date = start
 
-        parameters = {
+        self.parameters = {
             "start_date": startDate,
             "end_date": endDate,
-            "api_key": "UciPBat8ybi63BNgjcuVWih9gvwgRlayRiqLJ82g" #TODO remove API key
-        }
+            "api_key": "" #insert your own API key
+        } 
 
-        response = requests.get("https://api.nasa.gov/neo/rest/v1/feed?", params=parameters)
+        self.asteriods = []
+        self.asteriod_names = []
+        self.asteriod_Ids = []
+
+    def load_data(self):
+        response = requests.get("https://api.nasa.gov/neo/rest/v1/feed?", params=self.parameters)
         self.data = json.loads(response.text)
 
         self.element_count = self.data["element_count"]
-        self.asteriods = []
-        self.asteriod_names = [""]
-        self.asteriod_Ids = [""]
     
     def get_asteriods(self):
         index = 0
@@ -64,14 +66,11 @@ class Data_Extraction:
                 self.asteriod_Ids.append(tmp["id"])
                 self.asteriods.append(Data(tmp["id"], tmp["name"], tmp["estimated_diameter"]["kilometers"]["estimated_diameter_min"], tmp["estimated_diameter"]["kilometers"]["estimated_diameter_max"],
                                              tmp["estimated_diameter"]["meters"]["estimated_diameter_min"], tmp["estimated_diameter"]["meters"]["estimated_diameter_max"],
-                                             tmp["absolute_magnitude_h"], tmp["is_potentially_hazardous_asteroid"], tmp["close_approach_data"][0]["close_approach_date"], tmp["links"]["self"]))
+                                             tmp["absolute_magnitude_h"], tmp["is_potentially_hazardous_asteroid"], tmp["close_approach_data"][0]["close_approach_date"], tmp["nasa_jpl_url"]))
                 
                 index += 1
                 count += 1
             except:
                 index = 0
                 
-                self.current_date = self.current_date.replace(day = self.current_date.day + 1)           
-
-# data_extraction = Data_Extraction(date(2015, 9, 7), "2015-09-08")
-# data_extraction.get_asteriods()
+                self.current_date = self.current_date.replace(day = self.current_date.day + 1)
