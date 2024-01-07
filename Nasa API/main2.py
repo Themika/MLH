@@ -38,7 +38,7 @@ btn.place(relx= 0.05, rely=0.35)
 
 
 
-combo = Combobox(win, state='readonly')
+combo = Combobox(win, state='readonly', font=('Arial', 17), width=10)
 combo.place(relx = 0.11, rely=0.35)
 
 
