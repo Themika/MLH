@@ -59,7 +59,7 @@ def show_card():
     image_path = "Nasa API/16098389109815.jpg"
     width = 250
     height = 250
-
+    
     card = create_card(root, "Astroid:Change", "", "", "", "", "", "", "","", image_path, width, height)
     card.place(relx=0.5, rely=0.5, anchor='center')  
 
