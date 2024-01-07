@@ -33,15 +33,7 @@ et.place(relx= 0.125, rely= 0.3)
 btn = Button(win, text='Generate Asteroid', bd='5')
 btn.place(relx= 0.05, rely=0.35)
 
-
-
-
-
-
 combo = Combobox(win, state='readonly', font=('Arial', 17), width=10)
 combo.place(relx = 0.11, rely=0.35)
-
-
-
 
 win.mainloop()
