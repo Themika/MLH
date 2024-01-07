@@ -35,10 +35,10 @@ edate.place(relx = 0.05, rely = 0.3)
 
 
 st = Entry (win, bg='white',font=('Arial', 14, 'bold'), width=10, bd=5 )
-st.place(relx= 0.2, rely= 0.253)
+st.place(relx= 0.18, rely= 0.253)
 
 et = Entry (win, bg='white',font=('Arial', 14, 'bold'), width=10, bd=5 )
-et.place(relx= 0.2, rely= 0.3)
+et.place(relx= 0.18, rely= 0.3)
 
 
 def openURL(url):
@@ -126,7 +126,7 @@ style = ttk.Style(win)
 style.configure('LightGrey.TFrame', background='#8a8883')  # Use hex code for light grey
 
 #button is used to pull the data for those asteriods
-btn = Button(win, text='Generate Asteroid', bd='5', command=generateData)
+btn = Button(win, text='Generate Asteroids', bd='5', command=generateData)
 btn.place(relx= 0.05, rely=0.35) 
  
 
