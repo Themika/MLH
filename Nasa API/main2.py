@@ -29,6 +29,8 @@ st.place(relx= 0.13, rely= 0.253)
 et = Entry (win, bg='white',font=('Arial', 14, 'bold'), width=10, bd=5 )
 et.place(relx= 0.125, rely= 0.3)
 
+btn = Button(win, text='Generate Asteroid', bd='5')
+btn.place(relx= 0.05, rely=0.35)
 
 
 win.mainloop()
