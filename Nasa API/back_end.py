@@ -43,7 +43,7 @@ class Data_Extraction:
         self.parameters = {
             "start_date": startDate,
             "end_date": endDate,
-            "api_key": "" #insert your own API key
+            "api_key": "UciPBat8ybi63BNgjcuVWih9gvwgRlayRiqLJ82g" #insert your own API key
         } 
 
         self.asteriods = []

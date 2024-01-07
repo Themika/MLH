@@ -98,7 +98,7 @@ def show_card(a, b, c, d, e, f, g, h, i):
     height = 250
     
     card = create_card(win, f"{a}", f"{b}", f"{c}", f"{d}", f"{e}", f"{f}", f"{g}", f"{h}",f"{i}", image_path, width, height)
-    card.place(relx=0.5, rely=0.5, anchor='center')   
+    card.place(relx=0.5, rely=0.55, anchor='center')   
 
 def generateData():
     start_date = list(map(int, st.get().split("-")))
