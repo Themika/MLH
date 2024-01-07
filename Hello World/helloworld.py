@@ -12,7 +12,7 @@ print(''.join(array))
 #Visual in python
 root = tk.Tk()
 root.title("Hello World")
-Hello_World = tk.Label(root,text="Hello World", font=("Helvetica"))
+Hello_World = tk.Label(root,text="Hello, World!", font=("Helvetica"))
 Hello_World.pack()
 
 root.mainloop()
