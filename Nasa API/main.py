@@ -3,6 +3,8 @@ from tkinter import ttk
 from tkinter import *
 from PIL import Image, ImageTk
 
+root = tk.Tk()
+root.title("NASA API")
 
 
 def create_card(parent, title, esitmated_Diameter_Meter_Max, esitmated_Diameter_Meter_Min, esitmated_Diameter_KM_Max, esitmated_Diameter_KM_Min, absolute_Magnitude, Potential_Danger_Level, Date_Of_Nearest_Approach, image_path, width, height):
@@ -54,8 +56,7 @@ def show_card():
     card = create_card(root, "Astroid:Change", "", "", "", "", "", "", "", image_path, width, height)
     card.place(relx=0.5, rely=0.5, anchor='center')  
 
-root = tk.Tk()
-
+ 
 root.configure(background='black')
 root.title("Card Example")
 
