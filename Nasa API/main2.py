@@ -9,7 +9,7 @@ win.title("NASA API")
 win.configure(background='black')
 win.geometry('1920x1080')
 
-image = Image.open(r'C:\Users\hamza\OneDrive\Pictures\galaxy.jpg')
+image = Image.open(r'Nasa API\galaxy.jpg')
 image = ImageTk.PhotoImage(image)
 
 image_label = tk.Label(win, image=image)
@@ -42,8 +42,5 @@ btn.place(relx= 0.05, rely=0.35)
 
 combo = Combobox(win, state='readonly', font=('Arial', 17), width=10)
 combo.place(relx = 0.11, rely=0.35)
-
-
-
 
 win.mainloop()
