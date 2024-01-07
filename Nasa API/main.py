@@ -47,7 +47,7 @@ def create_card(parent, title, esitmated_Diameter_Meter_Max, esitmated_Diameter_
     return card_frame
 
 def show_card():
-    image_path = "C:/Users/Owner/Pictures/16098389109815.jpg"
+    image_path = "Nasa API/16098389109815.jpg"
     width = 250
     height = 250
 
