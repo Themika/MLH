@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk 
 from tkinter import *
+from tkinter.ttk import Combobox
 
 win = tk.Tk()
 win.title("NASA API")
@@ -31,6 +32,16 @@ et.place(relx= 0.125, rely= 0.3)
 
 btn = Button(win, text='Generate Asteroid', bd='5')
 btn.place(relx= 0.05, rely=0.35)
+
+
+
+
+
+
+combo = Combobox(win, state='readonly')
+combo.place(relx = 0.11, rely=0.35)
+
+
 
 
 win.mainloop()
