@@ -3,6 +3,8 @@ from tkinter import ttk
 from tkinter import *
 from PIL import Image, ImageTk
 
+
+
 def create_card(parent, title, esitmated_Diameter_Meter_Max, esitmated_Diameter_Meter_Min, esitmated_Diameter_KM_Max, esitmated_Diameter_KM_Min, absolute_Magnitude, Potential_Danger_Level, Date_Of_Nearest_Approach, image_path, width, height):
     card_frame = ttk.Frame(parent, borderwidth=60, height=500, relief='raised')
     card_frame.grid(row=0, column=0, padx=10, pady=10)
@@ -53,6 +55,8 @@ def show_card():
     card.place(relx=0.5, rely=0.5, anchor='center')  
 
 root = tk.Tk()
+
+root.configure(background='black')
 root.title("Card Example")
 
 btn = Button(root, text='Generate new Card !', bd='5', command=show_card)
