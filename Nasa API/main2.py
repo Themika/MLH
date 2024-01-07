@@ -27,8 +27,8 @@ des.place(relx = 0.5, rely = 0.09, anchor= CENTER)
 inst = ttk.Label (text = 'Enter date in YYYY-MM-DD format', font=('Arial', 15), background='black', foreground='white')
 inst.place(relx = 0.5, rely = 0.12, anchor= CENTER)
 
-inst2 = ttk.Label (text = 'The date can only be', font=('Arial', 15), background='black', foreground='white')
-inst.place(relx = 0.5, rely = 0.12, anchor= CENTER)
+inst2 = ttk.Label (text = 'The date can only be from 2015-09-06 to 2015-09-09', font=('Arial', 15), background='black', foreground='white')
+inst.place(relx = 0.5, rely = 0.14, anchor= CENTER)
 
 sdate = ttk.Label (text = 'Start Date:', font=('Arial', 20, 'bold'), background='black', foreground='white')
 sdate.place(relx = 0.05, rely = 0.25)
