@@ -51,7 +51,7 @@ def show_card():
     width = 250
     height = 250
 
-    card = create_card(root, "Astroid:Change", "Value", "Value", "Value", "Value", "Value", "Value", "Value", image_path, width, height)
+    card = create_card(root, "Astroid:Change", "", "", "", "", "", "", "", image_path, width, height)
     card.grid(row=1, column=0, padx=10, pady=10)
     card.place(relx=0.5, rely=0.5, anchor='center')  
 
